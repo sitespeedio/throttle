@@ -1,0 +1,43 @@
+{
+  "name": "@sitespeed.io/throttle",
+  "version": "0.0.0",
+  "description": "Throttle your connection",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sitespeedio/throttle.git"
+  },
+  "keywords": ['latency', 'throttle', 'bandwith', 'webperf', 'perfmatters'],
+  "author": {
+    "name": "Peter Hedenskog",
+    "url": "https://www.peterhedenskog.com"
+  },
+  "contributors": [
+    {
+      "name": "Tobias Lidskog"
+    },
+    {
+      "name": "Jonathan Lee"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sitespeedio/throttle/issues"
+  },
+  "homepage": "https://www.sitespeed.io",
+  "devDependencies": {
+    "eslint": "~4.5.0",
+    "eslint-config-prettier": "~2.3.0",
+    "eslint-plugin-prettier": "~2.1.2",
+    "prettier": "~1.5.3"
+  },
+  "dependencies": {
+    "execa": "0.8.0",
+    "minimist": "1.2.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
+  },
+  "bin": "./bin/index.js"
+}
