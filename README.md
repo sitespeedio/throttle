@@ -20,7 +20,12 @@ You can set the download/upload speed and RTT. Upload/download is in kbit/s and 
 **throttle --stop --localhost**
 
 ## Use directly in NodeJS
-WIP.
+
+```javascript
+const throttle = require('@sitespeed.io/throttle');
+// Returns a promise
+throttle.start({up: 360, down: 780, rtt: 200}).then(() => ...
+```
 
 ## Run in Docker (on Linux)
 
