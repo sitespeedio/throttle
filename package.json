@@ -40,5 +40,5 @@
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
   },
   "bin": "./bin/index.js",
-  "main": "./lib/index.js",
+  "main": "./lib/index.js"
 }
