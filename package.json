@@ -1,12 +1,18 @@
 {
   "name": "@sitespeed.io/throttle",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Throttle your connection",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sitespeedio/throttle.git"
   },
-  "keywords": ["latency", "throttle", "bandwith", "webperf", "perfmatters"],
+  "keywords": [
+    "latency",
+    "throttle",
+    "bandwith",
+    "webperf",
+    "perfmatters"
+  ],
   "author": {
     "name": "Peter Hedenskog",
     "url": "https://www.peterhedenskog.com"
