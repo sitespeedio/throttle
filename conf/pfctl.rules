@@ -1,0 +1,2 @@
+dummynet in all pipe 1
+dummynet out all pipe 2
