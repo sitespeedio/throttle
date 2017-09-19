@@ -39,5 +39,6 @@
     "lint:fix": "eslint . --fix",
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
   },
-  "bin": "./bin/index.js"
+  "bin": "./bin/index.js",
+  "main": "./lib/index.js",
 }
