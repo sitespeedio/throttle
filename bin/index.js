@@ -31,7 +31,10 @@ if (argv.help) {
     const options = {
       localhost: argv.localhost
     };
-    throttler.stop(options).then(() => console.log('Stopped throttler'));
+    throttler
+      .stop(options)
+      .then(() => console.log('Stopped throttler'))
+      .catch(() => console.log('No throttler to stop'));
   } else {
     const options = {
       up: argv.up || defaultUp,
