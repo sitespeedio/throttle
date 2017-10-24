@@ -4,7 +4,7 @@
 
 const minimist = require('minimist');
 const throttler = require('../lib/');
-
+const packageInfo = require('../package');
 const defaultUp = 330;
 const defaultDown = 780;
 const defaultRtt = 200;
@@ -26,6 +26,8 @@ if (argv.help) {
   console.log('   --up              Upload in Kbit/s ');
   console.log('   --down            Download Kbit/s');
   console.log('   --rtt             RTT in ms');
+} else if (argv.version) {
+    console.log(`${packageInfo.name} ${packageInfo.version}`);
 } else {
   if (argv.stop) {
     const options = {
