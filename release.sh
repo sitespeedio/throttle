@@ -7,3 +7,6 @@ set -e
 # You need np for this to work
 # npm install --global np
 np $1
+
+# Update the docs with latest release number
+bin/index.js --version  > ../sitespeed.io/docs/version/throttle.txt
