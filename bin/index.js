@@ -27,7 +27,7 @@ if (argv.help) {
   console.log('   --down            Download Kbit/s');
   console.log('   --rtt             RTT in ms');
 } else if (argv.version) {
-    console.log(`${packageInfo.name} ${packageInfo.version}`);
+    console.log(`${packageInfo.version}`);
 } else {
   if (argv.stop) {
     const options = {
