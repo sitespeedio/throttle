@@ -9,6 +9,34 @@ const defaultUp = 330;
 const defaultDown = 780;
 const defaultRtt = 200;
 
+const profiles = {
+  '3g': {
+    down: 1600,
+    up: 768,
+    rtt: 150
+  },
+  '3gfast': {
+    down: 1600,
+    up: 768,
+    rtt: 75
+  },
+  '3gslow': {
+    down: 400,
+    up: 400,
+    rtt: 200
+  },
+  '2g': {
+    down: 35,
+    up: 32,
+    rtt: 650
+  },
+  cable: {
+    down: 5000,
+    up: 1000,
+    rtt: 14
+  }
+};
+
 const argv = minimist(process.argv.slice(2), {
   boolean: ['stop', 'localhost']
 });
@@ -26,8 +54,24 @@ if (argv.help) {
   console.log('   --up              Upload in Kbit/s ');
   console.log('   --down            Download Kbit/s');
   console.log('   --rtt             RTT in ms');
+  console.log(
+    '   --profile         Premade profiles, set to one of the following'
+  );
+  Object.keys(profiles).forEach(function(profile) {
+    console.log(
+      '                     ' +
+        profile +
+        ': ' +
+        'up:' +
+        profiles[profile].up +
+        ' down:' +
+        profiles[profile].down +
+        ' rtt:' +
+        profiles[profile].rtt
+    );
+  });
 } else if (argv.version) {
-    console.log(`${packageInfo.version}`);
+  console.log(`${packageInfo.version}`);
 } else {
   if (argv.stop) {
     const options = {
@@ -38,12 +82,17 @@ if (argv.help) {
       .then(() => console.log('Stopped throttler'))
       .catch(() => console.log('No throttler to stop'));
   } else {
-    const options = {
-      up: argv.up || defaultUp,
-      down: argv.down || defaultDown,
-      rtt: argv.rtt || defaultRtt,
-      localhost: argv.localhost
-    };
+    let options;
+    if (argv.profile in profiles) {
+      options = profiles[argv.profile];
+    } else {
+      options = {
+        up: argv.up || defaultUp,
+        down: argv.down || defaultDown,
+        rtt: argv.rtt || defaultRtt,
+        localhost: argv.localhost
+      };
+    }
 
     throttler.start(options).then(() => {
       if (options.localhost) {
