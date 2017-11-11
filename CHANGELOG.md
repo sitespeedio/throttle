@@ -1,5 +1,10 @@
 # CHANGELOG - throttle
 
+## UNRELEASED
+
+### Fixed
+* Typeo in the CLI help
+
 ## 0.2.0 2017-10-31
 
 ### Added 
