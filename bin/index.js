@@ -45,7 +45,7 @@ if (argv.help) {
   console.log('   Set the connectivity using the throttler (pfctl/tc)');
   console.log('   Usage: throttler [options]');
   console.log(
-    '   If you run in Docker throtler will only work on a Linux host'
+    '   If you run in Docker throttler will only work on a Linux host'
   );
   console.log('   In Docker make sure to run: sudo modprobe ifb numifbs=1');
   console.log('   And run your container with --cap-add=NET_ADMIN\n');
