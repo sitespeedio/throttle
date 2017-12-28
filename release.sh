@@ -9,4 +9,4 @@ set -e
 np $1
 
 # Update the docs with latest release number
-bin/index.js --version  > ../sitespeed.io/docs/version/throttle.txt
+bin/index.js --version  > ../sitespeed.io/docs/_includes/version/throttle.txt
