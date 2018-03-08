@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "execa": "0.8.0",
+    "hasbin": "1.2.3",
     "minimist": "1.2.0"
   },
   "scripts": {
