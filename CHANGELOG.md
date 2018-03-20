@@ -3,6 +3,7 @@
 ## UNRELEASED
 
 ### Fixed
+* Ensure setup has completed fully before returning when starting throttling with tc.
 * Always return Promises from start() and stop(), even in case of errors.
 * Typo in the CLI help
 
