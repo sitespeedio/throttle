@@ -3,7 +3,8 @@
 ## UNRELEASED
 
 ### Fixed
-* Typeo in the CLI help
+* Always return Promises from start() and stop(), even in case of errors.
+* Typo in the CLI help
 
 ## 0.2.0 2017-10-31
 
