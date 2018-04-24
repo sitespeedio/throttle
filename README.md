@@ -13,6 +13,13 @@ This is an early release, so please help us find potential bugs.
 npm install @sitespeed.io/throttle -g
 ```
 
+On OSX, add these lines to ```/etc/pf.conf``` if they don't exist, to prevent the ```pfctl: Syntax error in config file: pf rules not loaded``` error when you try to run throttle
+
+```
+pf_enable="YES"
+pflog_enable="YES"
+```
+
 ## Start simulate a slower network connection
 
 Here is an example for running with 3G connectivity. Remember: Throttle will use sudo so your user will need
