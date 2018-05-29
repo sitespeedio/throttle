@@ -4,6 +4,9 @@
     "node": true,
     "es6": true
   },
+  "parserOptions": {
+    "ecmaVersion": 8
+  },
   "plugins": ["prettier"],
   "extends": "eslint:recommended",
   "rules": {
@@ -15,6 +18,7 @@
     ],
     "no-extra-semi": "off",
     "no-mixed-spaces-and-tabs": "off",
-    "no-unexpected-multiline": "off"
+    "no-unexpected-multiline": "off",
+    "no-return-await": "error"
   }
 }
