@@ -99,7 +99,9 @@ if (argv.help) {
         console.log(`Started throttler on localhost RTT:${options.rtt}ms `);
       } else {
         console.log(
-          `Started throttler: Down:${options.down}kbit/s Up:${options.up}kbit/s RTT:${options.rtt}ms `
+          `Started throttler: Down:${options.down}kbit/s Up:${
+            options.up
+          }kbit/s RTT:${options.rtt}ms `
         );
       }
     });
