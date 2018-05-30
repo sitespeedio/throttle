@@ -1,5 +1,9 @@
 # CHANGELOG - throttle
 
+## 0.4.0 2018-05-30
+### Added
+* Rewrite to async/await from promises
+
 ## 0.3.0 2018-04-12
 
 ### Fixed
