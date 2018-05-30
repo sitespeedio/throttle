@@ -1,5 +1,9 @@
 # CHANGELOG - throttle
 
+## 0.4.1 2018-05-30
+### Fixed
+* Another go at trying to try/catch failing settings.
+
 ## 0.4.0 2018-05-30
 ### Added
 * Rewrite to async/await from promises
