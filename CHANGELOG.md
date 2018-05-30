@@ -1,5 +1,9 @@
 # CHANGELOG - throttle
 
+## 0.4.2 2018-05-30
+### Fixed
+* Catching when ifb has already been setup.
+
 ## 0.4.1 2018-05-30
 ### Fixed
 * Another go at trying to try/catch failing settings.
