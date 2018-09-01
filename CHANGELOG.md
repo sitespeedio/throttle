@@ -1,5 +1,9 @@
 # CHANGELOG - throttle
 
+## 0.4.3 2018-09-01
+### Fixed
+* Upload throttling was wrong on Mac OS X, thank you  [Paul](https://github.com/paulz) for the [PR](https://github.com/sitespeedio/throttle/pull/16).
+
 ## 0.4.2 2018-05-30
 ### Fixed
 * Catching when ifb has already been setup.
