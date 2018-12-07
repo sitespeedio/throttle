@@ -41,7 +41,7 @@ const argv = minimist(process.argv.slice(2), {
   boolean: ['stop', 'localhost']
 });
 
-if (argv.help) {
+if (argv.help || argv._[0] === 'help') {
   console.log('   Set the connectivity using the throttler (pfctl/tc)');
   console.log('   Usage: throttler [options]');
   console.log(
@@ -73,7 +73,7 @@ if (argv.help) {
 } else if (argv.version) {
   console.log(`${packageInfo.version}`);
 } else {
-  if (argv.stop) {
+  if (argv.stop || argv._[0] === 'stop') {
     const options = {
       localhost: argv.localhost
     };
@@ -83,9 +83,11 @@ if (argv.help) {
       .catch(() => console.log('No throttler to stop'));
   } else {
     let options;
-    if (argv.profile in profiles) {
-      options = profiles[argv.profile];
+    if (argv.profile in profiles || argv._[0] in profiles) {
+      options = profiles[argv.profile || argv._[0]];
+      console.log('Using profile ' + (argv.profile ? argv.profile : argv._[0]));
     } else {
+      console.log('Using default profile');
       options = {
         up: argv.up || defaultUp,
         down: argv.down || defaultDown,

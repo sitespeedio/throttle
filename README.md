@@ -47,11 +47,22 @@ You can start throttle with one of the premade profiles:
 throttle --profile 3gslow
 ```
 
+or even simpler
+```
+throttle 3gslow
+```
+
 ## Stop simulate the network
 Stopping is as easy as giving the parameter *stop* to throttle.
 
 ```
 throttle --stop
+```
+
+or
+
+```
+throttle stop
 ```
 
 ## Add delay on your localhost (Linux only at the moment)

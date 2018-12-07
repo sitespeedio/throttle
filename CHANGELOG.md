@@ -1,8 +1,12 @@
 # CHANGELOG - throttle
 
+## 0.5.0 2018-12-07
+### Added
+* Simplified profile/stop/help. You can now start with: ```throttle $profile``` and stop with ```throttle stop```
+
 ## 0.4.3 2018-09-01
 ### Fixed
-* Upload throttling was wrong on Mac OS X, thank you  [Paul](https://github.com/paulz) for the [PR](https://github.com/sitespeedio/throttle/pull/16).
+* Upload throttling was wrong on Mac OS X, thank you [Paul](https://github.com/paulz) for the [PR](https://github.com/sitespeedio/throttle/pull/16).
 
 ## 0.4.2 2018-05-30
 ### Fixed
@@ -26,7 +30,7 @@
 
 ## 0.2.0 2017-10-31
 
-### Added 
+### Added
 * You can now see the version with --version
 * You can now use pre defined profiles.
 
