@@ -1,5 +1,9 @@
 # CHANGELOG - throttle
 
+## 0.5.1 2019-04-23
+### Fixed
+* Calling stop on Linux throwed error see [#20](https://github.com/sitespeedio/throttle/issues/20) and fixed by [Iñaki Baz Castillo](https://github.com/ibc), thank you!
+
 ## 0.5.0 2018-12-07
 ### Added
 * Simplified profile/stop/help. You can now start with: ```throttle $profile``` and stop with ```throttle stop```
