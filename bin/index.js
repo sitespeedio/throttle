@@ -5,9 +5,6 @@
 const minimist = require('minimist');
 const throttler = require('../lib/');
 const packageInfo = require('../package');
-const defaultUp = 330;
-const defaultDown = 780;
-const defaultRtt = 200;
 
 const profiles = {
   '3g': {
@@ -87,11 +84,10 @@ if (argv.help || argv._[0] === 'help') {
       options = profiles[argv.profile || argv._[0]];
       console.log('Using profile ' + (argv.profile ? argv.profile : argv._[0]));
     } else {
-      console.log('Using default profile');
       options = {
-        up: argv.up || defaultUp,
-        down: argv.down || defaultDown,
-        rtt: argv.rtt || defaultRtt,
+        up: argv.up,
+        down: argv.down,
+        rtt: argv.rtt,
         localhost: argv.localhost
       };
     }
@@ -100,11 +96,19 @@ if (argv.help || argv._[0] === 'help') {
       if (options.localhost) {
         console.log(`Started throttler on localhost RTT:${options.rtt}ms `);
       } else {
-        console.log(
-          `Started throttler: Down:${options.down}kbit/s Up:${
-            options.up
-          }kbit/s RTT:${options.rtt}ms `
-        );
+        let msg = 'Started throttler:';
+
+        if (typeof options.down !== 'undefined') {
+          msg += ` Down:${options.down}kbit/s`;
+        }
+        if (typeof options.up !== 'undefined') {
+          msg += ` Up:${options.up}kbit/s`;
+        }
+        if (typeof options.rtt !== 'undefined') {
+          msg += ` RTT:${options.rtt}ms`;
+        }
+
+        console.log(msg);
       }
     });
   }
