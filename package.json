@@ -34,14 +34,15 @@
     "node": ">=8.9.0"
   },
   "devDependencies": {
-    "eslint": "~4.19.1",
-    "eslint-config-prettier": "~2.9.0",
-    "eslint-plugin-prettier": "~2.6.0",
-    "prettier": "~1.13.2"
+    "eslint": "6.2.2",
+    "eslint-config-prettier": "6.1.0",
+    "eslint-plugin-prettier": "3.1.0",
+    "prettier": "1.18.2"
   },
   "dependencies": {
-    "execa": "0.10.0",
-    "minimist": "1.2.0"
+    "execa": "2.0.4",
+    "minimist": "1.2.0",
+    "np": "5.0.3"
   },
   "scripts": {
     "lint": "eslint .",
