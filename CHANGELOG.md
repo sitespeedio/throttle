@@ -1,5 +1,9 @@
 # CHANGELOG - throttle
 
+## 0.5.4 2019-08-26
+### Fixed
+* Another execa fix, hopefully fixing the last thing + added more tests in Travis.
+
 ## 0.5.3 2019-08-26
 ### Fixed
 * Over optimistic Execa upgraded caused Throttle to stop working [#32](https://github.com/sitespeedio/throttle/pull/32).
