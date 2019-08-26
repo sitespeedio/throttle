@@ -1,5 +1,9 @@
 # CHANGELOG - throttle
 
+## 0.5.2 2019-08-26
+### Fixed
+* Updated dependencies [#31](https://github.com/sitespeedio/throttle/pull/31). 
+
 ## 0.5.1 2019-04-23
 ### Fixed
 * Calling stop on Linux throwed error see [#20](https://github.com/sitespeedio/throttle/issues/20) and fixed by [Iñaki Baz Castillo](https://github.com/ibc), thank you!
