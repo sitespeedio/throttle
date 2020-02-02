@@ -30,12 +30,12 @@ const profiles = {
     up: 32,
     rtt: 650
   },
-  'cable': {
+  cable: {
     down: 5000,
     up: 1000,
     rtt: 14
   },
-  'dsl': {
+  dsl: {
     down: 1500,
     up: 384,
     rtt: 25
@@ -50,22 +50,22 @@ const profiles = {
     up: 9000,
     rtt: 85
   },
-  'lte': {
+  lte: {
     down: 12000,
     up: 12000,
     rtt: 35
   },
-  'edge': {
+  edge: {
     down: 240,
     up: 200,
     rtt: 420
   },
-  'dial': {
+  dial: {
     down: 49,
     up: 30,
     rtt: 60
   },
-  'fois': {
+  fois: {
     down: 20000,
     up: 5000,
     rtt: 2
