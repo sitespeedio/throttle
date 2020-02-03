@@ -26,9 +26,9 @@ const profiles = {
     rtt: 200
   },
   '2g': {
-    down: 35,
-    up: 32,
-    rtt: 650
+    down: 280,
+    up: 256,
+    rtt: 400
   },
   cable: {
     down: 5000,
