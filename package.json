@@ -1,6 +1,6 @@
 {
   "name": "@sitespeed.io/throttle",
-  "version": "0.5.4",
+  "version": "1.0.0",
   "description": "Throttle your connection",
   "repository": {
     "type": "git",
