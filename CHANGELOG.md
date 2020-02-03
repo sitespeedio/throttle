@@ -1,5 +1,12 @@
 # CHANGELOG - throttle
 
+## 1.0.0 2020-02-03
+### Changed
+* 2g speed was updated to become more usable and follow WPT [#36](https://github.com/sitespeedio/throttle/pull/36) - thank you [Matt Hobbs](https://github.com/Nooshu) for the PR.
+
+### Added
+* More pre-made profiles: dsl, 3gem, 4g, lte, edge, dial, fois [#36](https://github.com/sitespeedio/throttle/pull/36) - thank you [Matt Hobbs](https://github.com/Nooshu) for the PR.
+
 ## 0.5.4 2019-08-26
 ### Fixed
 * Another execa fix, hopefully fixing the last thing + added more tests in Travis.
