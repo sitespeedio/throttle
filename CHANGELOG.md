@@ -1,5 +1,10 @@
 # CHANGELOG - throttle
 
+
+## 1.0.1 2020-02-03
+### Fixed
+* Another fix to 2g to get that right, thank you Matt! [#37](https://github.com/sitespeedio/throttle/pull/37).
+
 ## 1.0.0 2020-02-03
 ### Changed
 * 2g speed was updated to become more usable and follow WPT [#36](https://github.com/sitespeedio/throttle/pull/36) - thank you [Matt Hobbs](https://github.com/Nooshu) for the PR.
