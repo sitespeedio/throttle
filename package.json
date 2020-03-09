@@ -41,8 +41,7 @@
   },
   "dependencies": {
     "execa": "2.0.4",
-    "minimist": "1.2.0",
-    "np": "5.0.3"
+    "minimist": "1.2.0"
   },
   "scripts": {
     "lint": "eslint .",
