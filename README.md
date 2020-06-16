@@ -7,6 +7,8 @@ You can set the download/upload speed and RTT. Upload/download is in kbit/s and 
 
 This is an early release, so please help us find potential bugs.
 
+Use with [latest NodeJS LTS](https://nodejs.org/en/).
+
 ## Install
 
 ```
