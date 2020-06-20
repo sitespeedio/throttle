@@ -1,5 +1,9 @@
 # CHANGELOG - throttle
 
+## 1.0.3 2020-06-20
+### Fixed
+* Updated minimist
+
 ## 1.0.2 2020-03-09
 ### Fixed
 * Fixed dependency tree and npm-shrinkwrap to only hold dependencies for production.
