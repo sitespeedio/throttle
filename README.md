@@ -2,6 +2,7 @@
 
 ![Linux](https://github.com/sitespeedio/throttle/workflows/Linux/badge.svg)
 ![OSX](https://github.com/sitespeedio/throttle/workflows/OSX/badge.svg)
+![Docker](https://github.com/sitespeedio/throttle/workflows/Run%20Docker/badge.svg)
 
 Inspired by [tylertreat/Comcast](https://github.com/tylertreat/Comcast), the [connectivity setting in the WPTAgent](https://github.com/WPO-Foundation/wptagent/blob/master/internal/traffic_shaping.py) and [sltc](https://github.com/sitespeedio/sltc).
 
