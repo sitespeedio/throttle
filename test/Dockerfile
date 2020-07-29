@@ -10,6 +10,8 @@ COPY npm-shrinkwrap.json /usr/src/app/
 RUN npm install --production
 COPY . /usr/src/app
 
+WORKDIR /usr/src/app
+
 COPY test/start.sh /start.sh
 
 ENTRYPOINT ["/start.sh"]
