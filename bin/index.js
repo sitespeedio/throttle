@@ -122,7 +122,6 @@ if (argv.help || argv._[0] === 'help') {
       options = profiles[argv.profile || argv._[0]];
       console.log('Using profile ' + (argv.profile ? argv.profile : argv._[0]));
     } else {
-      console.log('Using default profile');
       options = {
         up: argv.up || defaultUp,
         down: argv.down || defaultDown,
