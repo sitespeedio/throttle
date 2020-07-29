@@ -113,6 +113,13 @@ await throttle.stop();
 
 ```
 
+## Log all commands
+You can log all the commands that sets up the throttling by setting `LOG_THROTTLE=true`.
+
+```
+LOG_THROTTLE=true throttle 3gslow
+```
+
 ## Run in Docker (on Linux)
 
 Make sure to run ```sudo modprobe ifb numifbs=1``` before you start the container.
