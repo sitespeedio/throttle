@@ -1,5 +1,10 @@
 # CHANGELOG - throttle
 
+## UNRELEASED
+### Fixed
+* Updated execa to 4.0.3.
+* Removed log message "using default profile"
+
 ## 1.0.3 2020-06-20
 ### Fixed
 * Updated minimist
