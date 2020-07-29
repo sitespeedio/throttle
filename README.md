@@ -100,6 +100,18 @@ const throttle = require('@sitespeed.io/throttle');
 throttle.start({up: 360, down: 780, rtt: 200}).then(() => ...
 ```
 
+or 
+
+```javascript
+const throttle = require('@sitespeed.io/throttle');
+// Returns a promise
+const options = {up: 360, down: 780, rtt: 200};
+await throttle.start(options);
+// Do your thing and then stop
+await throttle.stop();
+
+```
+
 ## Run in Docker (on Linux)
 
 Make sure to run ```sudo modprobe ifb numifbs=1``` before you start the container.
