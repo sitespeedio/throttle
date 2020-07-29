@@ -5,6 +5,9 @@
 * Updated execa to 4.0.3.
 * Removed log message "using default profile"
 
+### Added
+* You can log all the commands that sets up the throttling by setting ```LOG_THROTTLE=true``` [#44](https://github.com/sitespeedio/throttle/pull/44).
+
 ## 1.0.3 2020-06-20
 ### Fixed
 * Updated minimist
