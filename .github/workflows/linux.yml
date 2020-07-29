@@ -1,0 +1,31 @@
+name: Linux
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install dependencies  
+      run: |
+        npm ci
+    - name: Verify lint
+      run: npm run lint
+    - name: Test cable 
+      run: bin/index.js cable && bin/index.js stop
+    - name: Test configuration 
+      run: bin/index.js throttle --up 330 --down 780 --rtt 200 && bin/index.js stop
+    - name: Test localhost 
+      run: bin/index.js --rtt 200 --localhost && bin/index.js stop --localhost
