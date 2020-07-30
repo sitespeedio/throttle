@@ -2,13 +2,14 @@
 
 # 2.0.0 - UNRELEASED
 ### Changed
-* You can now set one of up/down/rtt if you like as introduced by [Iñaki Baz Castillo](https://github.com/ibc) - thank you! Implemented in [#46](https://github.com/sitespeedio/throttle/pull/46). This also remove the default profile meaning there's a change in behavoir if you run throttle without any parameter. Before a default profile was used but now you get an error (you know need to set a profile or set up/down or rtt).
+* You can now set one of up/down/rtt if you like as introduced by [Iñaki Baz Castillo](https://github.com/ibc) - thank you! Implemented in [#46](https://github.com/sitespeedio/throttle/pull/46). This also remove the default profile meaning there's a change in behavior if you run throttle without any parameters. Before a default profile was used but now you get an error (you know need to set a profile or set up/down or rtt).
 
 ### Added
 * You can use ```--log``` to log all networks commands [#45](https://github.com/sitespeedio/throttle/pull/45).
 
 ### Fixed
 * Add missing await when removing the ingress if removing root fails for tc [#47](https://github.com/sitespeedio/throttle/pull/47).
+* Better error handling in the CLI [#48](https://github.com/sitespeedio/throttle/pull/48). Make sure that the exit code is > 0 if setting the throttling fails.
 
 ## 1.1.0 2020-07-29
 ### Fixed
