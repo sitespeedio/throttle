@@ -7,6 +7,9 @@
 ### Added
 * You can use ```--log``` to log all networks commands [#45](https://github.com/sitespeedio/throttle/pull/45).
 
+### Fixed
+* Add missing await when removing the ingress if removing root fails for tc [#47](https://github.com/sitespeedio/throttle/pull/47).
+
 ## 1.1.0 2020-07-29
 ### Fixed
 * Updated execa to 4.0.3.
