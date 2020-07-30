@@ -105,6 +105,7 @@ if (argv.help || argv._[0] === 'help') {
         profiles[profile].rtt
     );
   });
+  console.log('   --log             Log all network commands to the console');
 } else if (argv.version) {
   console.log(`${packageInfo.version}`);
 } else {
@@ -118,6 +119,9 @@ if (argv.help || argv._[0] === 'help') {
       .catch(() => console.log('No throttler to stop'));
   } else {
     let options;
+    if (argv.log) {
+      process.env.LOG_THROTTLE = true;
+    }
     if (argv.profile in profiles || argv._[0] in profiles) {
       options = profiles[argv.profile || argv._[0]];
       console.log('Using profile ' + (argv.profile ? argv.profile : argv._[0]));
