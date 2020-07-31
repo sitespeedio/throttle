@@ -11,6 +11,9 @@
 * Add missing await when removing the ingress if removing root fails for tc [#47](https://github.com/sitespeedio/throttle/pull/47).
 * Better error handling in the CLI [#48](https://github.com/sitespeedio/throttle/pull/48). Make sure that the exit code is > 0 if setting the throttling fails.
 
+### Tech
+* Removed configuration file for pfctl to make it easier to set up dynamic dummynet [#49](https://github.com/sitespeedio/throttle/pull/49)
+
 ## 1.1.0 2020-07-29
 ### Fixed
 * Updated execa to 4.0.3.
