@@ -6,6 +6,7 @@
 
 ### Added
 * You can use ```--log``` to log all networks commands [#45](https://github.com/sitespeedio/throttle/pull/45).
+* Added support to add delay on for localhost on OS X. Use ```--rtt 100 --localhost``` [#51](https://github.com/sitespeedio/throttle/pull/51).
 
 ### Fixed
 * Add missing await when removing the ingress if removing root fails for tc [#47](https://github.com/sitespeedio/throttle/pull/47).
