@@ -40,7 +40,6 @@
     "prettier": "1.18.2"
   },
   "dependencies": {
-    "execa": "4.0.3",
     "minimist": "1.2.5"
   },
   "scripts": {
