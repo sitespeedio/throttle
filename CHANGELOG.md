@@ -1,5 +1,9 @@
 # CHANGELOG - throttle
 
+# UNRELEASED
+## Fixed
+* Removed the execa dependency to make sure we have minimal dependencies [#53](https://github.com/sitespeedio/throttle/pull/53).
+
 # 2.0.0 - 2020-08-14
 ### Changed
 * You can now set one of up/down/rtt if you like as introduced by [Iñaki Baz Castillo](https://github.com/ibc) - thank you! Implemented in [#46](https://github.com/sitespeedio/throttle/pull/46). This also remove the default profile meaning there's a change in behavior if you run throttle without any parameters. Before a default profile was used but now you get an error (you know need to set a profile or set up/down or rtt).
