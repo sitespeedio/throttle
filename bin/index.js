@@ -90,7 +90,7 @@ async function run(argv) {
     console.log(
       '   --profile         Premade profiles, set to one of the following'
     );
-    Object.keys(profiles).forEach(function(profile) {
+    Object.keys(profiles).forEach(function (profile) {
       console.log(
         '                     ' +
           profile +
