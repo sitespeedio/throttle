@@ -1,5 +1,9 @@
 # CHANGELOG - throttle
 
+# 2.0.2 - 2020-09-10
+## Fixed
+* Make the install as small as possible.
+
 # 2.0.1 - 2020-08-22
 ## Fixed
 * Removed the execa dependency to make sure we have minimal dependencies [#53](https://github.com/sitespeedio/throttle/pull/53).
