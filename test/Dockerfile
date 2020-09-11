@@ -7,11 +7,9 @@ VOLUME /throttle
 WORKDIR /usr/src/app
 
 COPY package.json /usr/src/app/
-COPY npm-shrinkwrap.json /usr/src/app/
+COPY package-lock.json /usr/src/app/
 RUN npm install --production
 COPY . /usr/src/app
-
-
 
 COPY test/start.sh /start.sh
 
