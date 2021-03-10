@@ -63,6 +63,23 @@ or even simpler
 throttle 3gslow
 ```
 
+## Use a configuration file
+You can also use a configuration file with your settings. Use `--config` to map your config file to throttle.
+
+config.json
+```json
+{
+    "up": 330 ,
+    "down": 200,
+    "rtt": 1000
+}
+```
+
+And then run:
+```
+throttle --config config.json
+```
+
 ## Stop simulate the network
 Stopping is as easy as giving the parameter *stop* to throttle.
 

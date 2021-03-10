@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 'use strict';
-
+const fs = require('fs');
 const minimist = require('minimist');
 const throttler = require('../lib/');
 const packageInfo = require('../package');
@@ -90,6 +90,7 @@ async function run(argv) {
     console.log(
       '   --profile         Premade profiles, set to one of the following'
     );
+    console.log('   --config          Path to config file');
     Object.keys(profiles).forEach(function (profile) {
       console.log(
         '                     ' +
@@ -123,6 +124,14 @@ async function run(argv) {
         console.log(
           'Using profile ' + (argv.profile ? argv.profile : argv._[0])
         );
+      } else if (argv.config) {
+        try {
+          const data = fs.readFileSync(argv.config, 'utf8');
+          options = JSON.parse(data);
+        } catch (e) {
+          console.error(e);
+          process.exitCode = 1;
+        }
       } else {
         options = {
           up: argv.up,
