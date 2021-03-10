@@ -1,5 +1,8 @@
 # CHANGELOG - throttle
 
+# 2.1.0 - 2021-03-10
+## Added
+* Added support for config files. Use `--config config.json` to read configuration setup from a file.
 # 2.0.2 - 2020-09-10
 ## Fixed
 * Make the install as small as possible.
