@@ -22,6 +22,8 @@ jobs:
       run: npm ci
     - name: Verify lint
       run: npm run lint
+    - name: Show interfaces
+      run: sudo route
     - name: Test cable 
       run: bin/index.js cable && bin/index.js stop
     - name: Test configuration 
