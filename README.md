@@ -25,6 +25,8 @@ pf_enable="YES"
 pflog_enable="YES"
 ```
 
+On Linux you need to make sure *ip* and *route* is installed (install using `sudo apt-get install -y net-tools`).
+
 ## Start simulate a slower network connection
 
 Here is an example for running with 3G connectivity. Remember: Throttle will use sudo so your user will need sudo rights.
