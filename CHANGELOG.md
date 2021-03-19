@@ -1,5 +1,8 @@
 # CHANGELOG - throttle
 
+# 2.1.1 - 2021-03-19
+### Fixed
+* A better check for missing net-tools on Linux, thank you [Radu Micu](https://github.com/radum) for the PR [#56](https://github.com/sitespeedio/throttle/pull/56).
 # 2.1.0 - 2021-03-10
 ## Added
 * Added support for config files. Use `--config config.json` to read configuration setup from a file.
