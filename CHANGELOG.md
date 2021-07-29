@@ -1,5 +1,8 @@
 # CHANGELOG - throttle
 
+# 2.1.2 - 2021-07-29
+### Fixed
+* Fix breakage when multiple default routes are declared , thank you [Andy Richardson](https://github.com/andyrichardson) for PR [#62](https://github.com/sitespeedio/throttle/pull/62).
 # 2.1.1 - 2021-03-19
 ### Fixed
 * A better check for missing net-tools on Linux, thank you [Radu Micu](https://github.com/radum) for the PR [#56](https://github.com/sitespeedio/throttle/pull/56).
