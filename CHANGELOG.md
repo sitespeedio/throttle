@@ -1,5 +1,9 @@
 # CHANGELOG - throttle
 
+# 3.0.0 - 2021-08-09
+
+### Breaking change
+* When you run on Mac OS we changed so localhost traffic is not throttled. To throttle on localhost use `--localhost`.
 # 2.1.2 - 2021-07-29
 ### Fixed
 * Fix breakage when multiple default routes are declared , thank you [Andy Richardson](https://github.com/andyrichardson) for PR [#62](https://github.com/sitespeedio/throttle/pull/62).
