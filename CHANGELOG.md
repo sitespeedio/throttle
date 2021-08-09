@@ -2,7 +2,7 @@
 
 # 3.0.0 - 2021-08-09
 
-### Breaking change
+### Changed
 * When you run on Mac OS we changed so localhost traffic is not throttled by default. To throttle on localhost use `--localhost`. This makes sence if you use WebDriver to drive your browser on your local machine. And Mac OS now works the same as Linux.
 # 2.1.2 - 2021-07-29
 ### Fixed
