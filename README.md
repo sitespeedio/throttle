@@ -96,7 +96,7 @@ throttle stop
 ```
 
 ## Add delay on your localhost 
-This is useful if you test a local web server or run [WebPageReplay](https://github.com/catapult-project/catapult/blob/master/web_page_replay_go/README.md) and want to add som latency to your tests.
+This is useful if you test a local web server or run [WebPageReplay](https://github.com/catapult-project/catapult/blob/master/web_page_replay_go/README.md) and want to add some latency to your tests.
 
 ```
 throttle --rtt 200 --localhost
