@@ -1,5 +1,8 @@
 # CHANGELOG - throttle
 
+# 3.1.0 - 2021-12-26
+### Added
+* Add support for setting packet loss. Add `--packetLoss` and set the loss in percentage.
 # 3.0.0 - 2021-08-09
 
 ### Changed

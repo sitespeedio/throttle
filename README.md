@@ -65,6 +65,15 @@ or even simpler
 throttle 3gslow
 ```
 
+## Add packet loss
+
+By default there's no packet loss. That is by design: If you want to use Throttle and have the same network speed, packet loss is no good. However if you want to simalate a really crappy network you probably want to add packet loss. You do that with the `--packetLoss` option. You set the packet loss in percent.
+
+```
+throttle --profile 3gslow --packetLoss 5
+```
+
+
 ## Use a configuration file
 You can also use a configuration file with your settings. Use `--config` to map your config file to throttle.
 
