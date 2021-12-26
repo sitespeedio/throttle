@@ -2,7 +2,10 @@
 
 # 4.0.0 - UNRELEASED
 ### Changed
-* Converting the project to ES6 module. Dropping support for NodeJS 10.
+* Converting the project to ES6 module. Dropping support for NodeJS 10 [#67](https://github.com/sitespeedio/throttle/pull/67).
+
+### Fixed
+* Updated dev dependencies to latest versions [#68](https://github.com/sitespeedio/throttle/pull/68)
 # 3.1.0 - 2021-12-26
 ### Added
 * Add support for setting packet loss. Add `--packetLoss` and set the loss in percentage.
