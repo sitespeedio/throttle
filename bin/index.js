@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-'use strict';
-const fs = require('fs');
-const minimist = require('minimist');
-const throttler = require('../lib/');
-const packageInfo = require('../package');
+import { readFileSync } from 'fs';
+import minimist from 'minimist';
+import { stop, start } from '../lib/index.js';
+
+const pkg = JSON.parse(readFileSync('./package.json'));
 
 const profiles = {
   '3g': {
@@ -107,13 +107,13 @@ async function run(argv) {
     });
     console.log('   --log             Log all network commands to the console');
   } else if (argv.version) {
-    console.log(`${packageInfo.version}`);
+    console.log(`${pkg.version}`);
   } else {
     if (argv.stop || argv._[0] === 'stop') {
       const options = {
         localhost: argv.localhost
       };
-      await throttler.stop(options);
+      await stop(options);
       console.log('Stopped throttler');
     } else {
       let options;
@@ -132,7 +132,7 @@ async function run(argv) {
         );
       } else if (argv.config) {
         try {
-          const data = fs.readFileSync(argv.config, 'utf8');
+          const data = readFileSync(argv.config, 'utf8');
           options = JSON.parse(data);
         } catch (e) {
           console.error(e);
@@ -149,7 +149,7 @@ async function run(argv) {
       }
 
       try {
-        await throttler.start(options);
+        await start(options);
         if (options.localhost) {
           console.log(`Started throttler on localhost RTT:${options.rtt}ms `);
         } else {
