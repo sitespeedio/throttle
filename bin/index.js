@@ -87,6 +87,7 @@ async function run(argv) {
     console.log('   --up              Upload in Kbit/s ');
     console.log('   --down            Download Kbit/s');
     console.log('   --rtt             RTT in ms');
+    console.log('   --packetLoss      Packet loss in %. Default is 0');
     console.log(
       '   --profile         Premade profiles, set to one of the following'
     );
@@ -121,6 +122,11 @@ async function run(argv) {
       }
       if (argv.profile in profiles || argv._[0] in profiles) {
         options = profiles[argv.profile || argv._[0]];
+
+        if (argv.packetLoss) {
+          options.packetLoss = argv.packetLoss;
+        }
+
         console.log(
           'Using profile ' + (argv.profile ? argv.profile : argv._[0])
         );
@@ -137,7 +143,8 @@ async function run(argv) {
           up: argv.up,
           down: argv.down,
           rtt: argv.rtt,
-          localhost: argv.localhost
+          localhost: argv.localhost,
+          packetLoss: argv.packetLoss || 0
         };
       }
 
@@ -155,6 +162,9 @@ async function run(argv) {
           }
           if (typeof options.rtt !== 'undefined') {
             msg += ` RTT:${options.rtt}ms`;
+          }
+          if (typeof options.packetLoss !== 'undefined') {
+            msg += ` PacketLoss:${options.packetLoss}%`;
           }
           console.log(msg);
         }
