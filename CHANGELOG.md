@@ -2,7 +2,7 @@
 
 # 4.0.0 - 2022-04-14
 ### Changed
-* Converting the project to ES6 module. If you run Throttle by command line it will work exactly as before except that we dropped support for NodeJS 10 [#67](https://github.com/sitespeedio/throttle/pull/67).
+* Converting the project to ES6 module. If you run Throttle by command line it will work exactly as before except that we dropped support for NodeJS 10 [#67](https://github.com/sitespeedio/throttle/pull/67). You can read [Sindre Sorhus ESM package guide](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c).
 
 ### Fixed
 * Updated dev dependencies to latest versions [#68](https://github.com/sitespeedio/throttle/pull/68)
