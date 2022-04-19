@@ -6,6 +6,10 @@
 
 ### Fixed
 * Updated dev dependencies to latest versions [#68](https://github.com/sitespeedio/throttle/pull/68)
+
+# 3.1.1 - 2022-04-19
+### Fixed
+* Updated minimist dependency.
 # 3.1.0 - 2021-12-26
 ### Added
 * Add support for setting packet loss. Add `--packetLoss` and set the loss in percentage.
