@@ -1,11 +1,18 @@
 # CHANGELOG - throttle
 
-# 4.0.0 - UNRELEASED
+# 4.0.1 - 2022-06-17
+### Fixed
+* Removed the dependecy of route. Using `ip route` instead and we already have `ip` as a requirement.
+# 4.0.0 - 2022-04-14
 ### Changed
-* Converting the project to ES6 module. Dropping support for NodeJS 10 [#67](https://github.com/sitespeedio/throttle/pull/67).
+* Converting the project to ES6 module. If you run Throttle by command line it will work exactly as before except that we dropped support for NodeJS 10 [#67](https://github.com/sitespeedio/throttle/pull/67). You can read [Sindre Sorhus ESM package guide](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c).
 
 ### Fixed
 * Updated dev dependencies to latest versions [#68](https://github.com/sitespeedio/throttle/pull/68)
+
+# 3.1.1 - 2022-04-19
+### Fixed
+* Updated minimist dependency.
 # 3.1.0 - 2021-12-26
 ### Added
 * Add support for setting packet loss. Add `--packetLoss` and set the loss in percentage.
