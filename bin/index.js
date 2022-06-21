@@ -4,8 +4,6 @@ import { readFileSync } from 'fs';
 import minimist from 'minimist';
 import { stop, start } from '../lib/index.js';
 
-const pkg = JSON.parse(readFileSync('./package.json'));
-
 const profiles = {
   '3g': {
     down: 1600,
@@ -107,7 +105,7 @@ async function run(argv) {
     });
     console.log('   --log             Log all network commands to the console');
   } else if (argv.version) {
-    console.log(`${pkg.version}`);
+    console.log(`Unknown`);
   } else {
     if (argv.stop || argv._[0] === 'stop') {
       const options = {
