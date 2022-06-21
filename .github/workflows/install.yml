@@ -1,0 +1,23 @@
+name: Install latest release
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+    - name: Install throttle
+      run: npm install @sitespeed.io/throttle -g
+    - name: Install dependencies
+      run: sudo apt-get install -y net-tools
+    - name: Show interfaces
+      run: sudo ip r
+    - name: Test cable 
+      run: throttle cable
