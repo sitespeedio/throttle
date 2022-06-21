@@ -1,6 +1,6 @@
 {
   "name": "@sitespeed.io/throttle",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Throttle your connection",
   "type": "module",
   "exports": "./lib/index.js",
