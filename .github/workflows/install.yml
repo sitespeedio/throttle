@@ -1,4 +1,4 @@
-name: Linux
+name: Install latest release
 on:
   push:
     branches:
@@ -17,8 +17,6 @@ jobs:
       run: npm install @sitespeed.io/throttle -g
     - name: Install dependencies
       run: sudo apt-get install -y net-tools
-    - name: Verify lint
-      run: npm run lint
     - name: Show interfaces
       run: sudo ip r
     - name: Test cable 
