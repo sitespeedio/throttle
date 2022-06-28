@@ -3,6 +3,9 @@
 import { readFileSync } from 'fs';
 import minimist from 'minimist';
 import { stop, start } from '../lib/index.js';
+import { createRequire } from 'node:module';
+const require = createRequire(import.meta.url);
+const version = require('../package.json').version;
 
 const profiles = {
   '3g': {
@@ -105,7 +108,7 @@ async function run(argv) {
     });
     console.log('   --log             Log all network commands to the console');
   } else if (argv.version) {
-    console.log(`Unknown`);
+    console.log(`${version}`);
   } else {
     if (argv.stop || argv._[0] === 'stop') {
       const options = {
