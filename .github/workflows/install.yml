@@ -19,5 +19,7 @@ jobs:
       run: sudo apt-get install -y net-tools
     - name: Show interfaces
       run: sudo ip r
+    - name: Show version
+      run: throttle --version
     - name: Test cable 
       run: throttle cable
