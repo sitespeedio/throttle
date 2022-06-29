@@ -1,8 +1,11 @@
 # CHANGELOG - throttle
 
+# 4.0.3 - 2022-06-29
+### Fixed
+* Fixed `--version` so it actually shows the version again [#75](https://github.com/sitespeedio/throttle/pull/75).
 # 4.0.2 - 2022-06-21
 ### Fixed
-* The E6 Module convertion in 4.0 broke version check ('--version') making installs failed. PR [#74](https://github.com/sitespeedio/throttle/pull/74) is a temporaty fix for that.
+* The E6 Module convertion in 4.0 broke version check (`--version`) making installs failed. PR [#74](https://github.com/sitespeedio/throttle/pull/74) is a temporaty fix for that.
 
 # 4.0.1 - 2022-06-17
 ### Fixed
