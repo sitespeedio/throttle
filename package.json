@@ -5,7 +5,7 @@
   "type": "module",
   "exports": "./lib/index.js",
   "engines": {
-    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+    "node": ">=14.16"
   },
   "repository": {
     "type": "git",
