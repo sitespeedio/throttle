@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { readFileSync } from 'fs';
+import { readFileSync } from 'node:fs';
 import minimist from 'minimist';
 import { stop, start } from '../lib/index.js';
 import { createRequire } from 'node:module';
@@ -49,8 +49,8 @@ const profiles = {
     rtt: 85
   },
   lte: {
-    down: 12000,
-    up: 12000,
+    down: 12_000,
+    up: 12_000,
     rtt: 35
   },
   edge: {
@@ -64,7 +64,7 @@ const profiles = {
     rtt: 60
   },
   fois: {
-    down: 20000,
+    down: 20_000,
     up: 5000,
     rtt: 2
   }
@@ -93,7 +93,7 @@ async function run(argv) {
       '   --profile         Premade profiles, set to one of the following'
     );
     console.log('   --config          Path to config file');
-    Object.keys(profiles).forEach(function (profile) {
+    for (const profile of Object.keys(profiles)) {
       console.log(
         '                     ' +
           profile +
@@ -105,7 +105,7 @@ async function run(argv) {
           ' rtt:' +
           profiles[profile].rtt
       );
-    });
+    }
     console.log('   --log             Log all network commands to the console');
   } else if (argv.version) {
     console.log(`${version}`);
@@ -128,15 +128,13 @@ async function run(argv) {
           options.packetLoss = argv.packetLoss;
         }
 
-        console.log(
-          'Using profile ' + (argv.profile ? argv.profile : argv._[0])
-        );
+        console.log('Using profile ' + (argv.profile || argv._[0]));
       } else if (argv.config) {
         try {
           const data = readFileSync(argv.config, 'utf8');
           options = JSON.parse(data);
-        } catch (e) {
-          console.error(e);
+        } catch (error) {
+          console.error(error);
           process.exitCode = 1;
         }
       } else {
@@ -154,27 +152,27 @@ async function run(argv) {
         if (options.localhost) {
           console.log(`Started throttler on localhost RTT:${options.rtt}ms `);
         } else {
-          let msg = 'Started throttler:';
+          let message = 'Started throttler:';
           if (typeof options.down !== 'undefined') {
-            msg += ` Down:${options.down}kbit/s`;
+            message += ` Down:${options.down}kbit/s`;
           }
           if (typeof options.up !== 'undefined') {
-            msg += ` Up:${options.up}kbit/s`;
+            message += ` Up:${options.up}kbit/s`;
           }
           if (typeof options.rtt !== 'undefined') {
-            msg += ` RTT:${options.rtt}ms`;
+            message += ` RTT:${options.rtt}ms`;
           }
           if (typeof options.packetLoss !== 'undefined') {
-            msg += ` PacketLoss:${options.packetLoss}%`;
+            message += ` PacketLoss:${options.packetLoss}%`;
           }
-          console.log(msg);
+          console.log(message);
         }
-      } catch (e) {
-        console.error(e);
+      } catch (error) {
+        console.error(error);
         process.exitCode = 1;
       }
     }
   }
 }
 
-run(argv);
+await run(argv);

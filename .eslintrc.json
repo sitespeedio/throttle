@@ -1,14 +1,15 @@
 {
   "root": true,
   "env": {
-    "node": true
+    "node": true,
+    "es2022": true
   },
   "parserOptions": {
-    "ecmaVersion": 13,
+    "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["prettier"],
-  "extends": "eslint:recommended",
+  "plugins": ["prettier", "unicorn"],
+  "extends": "plugin:unicorn/recommended",
   "rules": {
     "prettier/prettier": [
       "error",
@@ -20,6 +21,7 @@
     "no-extra-semi": "off",
     "no-mixed-spaces-and-tabs": "off",
     "no-unexpected-multiline": "off",
-    "no-return-await": "error"
+    "no-return-await": "error",
+    "unicorn/filename-case": "off"
   }
 }
