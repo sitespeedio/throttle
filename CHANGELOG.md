@@ -1,6 +1,6 @@
 # CHANGELOG - throttle
 
-# 5.0.0 - UNRELEASED
+# 5.0.0 - 2022-07-02
 ### Changed
 * Dropped support for NodeJS 12 since it's unmaintaned.
 
