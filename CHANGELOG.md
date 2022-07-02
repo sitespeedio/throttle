@@ -3,6 +3,9 @@
 # 5.0.0 - UNRELEASED
 ### Changed
 * Dropped support for NodeJS 12 since it's unmaintaned.
+
+### Tech
+* Code cleanup using eslint-plugin-unicorn.
 # 4.0.3 - 2022-06-29
 ### Fixed
 * Fixed `--version` so it actually shows the version again [#75](https://github.com/sitespeedio/throttle/pull/75).
