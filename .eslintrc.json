@@ -9,7 +9,7 @@
     "sourceType": "module"
   },
   "plugins": ["prettier", "unicorn"],
-  "extends": "plugin:unicorn/recommended",
+  "extends": ["eslint:recommended", "plugin:unicorn/recommended"],
   "rules": {
     "prettier/prettier": [
       "error",
