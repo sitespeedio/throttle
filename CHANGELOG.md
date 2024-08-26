@@ -1,5 +1,9 @@
 # CHANGELOG - throttle
 
+# 5.0.1 - 2024-08-26
+### Fixed
+* Smarter ifb0 handling on Linux [#93](https://github.com/sitespeedio/throttle/pull/93).
+
 # 5.0.0 - 2022-07-02
 ### Changed
 * Dropped support for NodeJS 12 since it's unmaintaned.
