@@ -26,6 +26,8 @@ jobs:
       run: npm run lint
     - name: Show interfaces
       run: sudo ip route show
+    - name: Get default interface
+      run: sudo ip route | awk '/default/ {print $5; exit}' | tr -d '\n'
     - name: Test cable 
       run: bin/index.js cable && bin/index.js stop
     - name: Test configuration 
