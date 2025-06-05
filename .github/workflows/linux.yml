@@ -21,7 +21,7 @@ jobs:
     - name: Install throttle
       run: npm ci
     - name: Install dependencies
-      run: sudo apt-get install -y net-tools
+      run: sudo apt-get install -y iproute2
     - name: Verify lint
       run: npm run lint
     - name: Show interfaces
