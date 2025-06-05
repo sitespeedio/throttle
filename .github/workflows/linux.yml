@@ -21,7 +21,7 @@ jobs:
     - name: Install throttle
       run: npm ci
     - name: Install dependencies
-      run: sudo apt-get install -y iproute2
+      run: sudo apt-get install -y net-tools
     - name: Verify lint
       run: npm run lint
     - name: Show interfaces
@@ -31,11 +31,11 @@ jobs:
     - name: Test cable 
       run: bin/index.js cable && bin/index.js stop
     - name: Test configuration 
-      run: bin/index.js throttle --up 330 --down 780 --rtt 200 && bin/index.js stop
+      run: LOG_THROTTLE=true bin/index.js throttle --up 330 --down 780 --rtt 200 && bin/index.js stop
     - name: Test localhost 
-      run: bin/index.js --rtt 200 --localhost && bin/index.js stop --localhost
+      run: LOG_THROTTLE=true bin/index.js --rtt 200 --localhost && bin/index.js stop --localhost
     - name: Test config file
-      run: bin/index.js --config test/config.json && bin/index.js stop
+      run: LOG_THROTTLE=true bin/index.js --config test/config.json && bin/index.js stop
     - name: Test packet loss
       run: bin/index.js throttle --up 330 --down 780 --rtt 200 --packetLoss 10 && bin/index.js stop
     - name: Test packet loss and profile
