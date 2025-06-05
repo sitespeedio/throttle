@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x, 18.x, 20.x]
+        node-version: [20.x, 22.x, 24.x]
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
@@ -25,16 +25,18 @@ jobs:
     - name: Verify lint
       run: npm run lint
     - name: Show interfaces
-      run: sudo ip r
+      run: sudo ip route show
+    - name: Get default interface
+      run: sudo ip route | awk '/default/ {print $5; exit}' | tr -d '\n'
     - name: Test cable 
-      run: bin/index.js cable && bin/index.js stop
+      run: LOG_THROTTLE=true bin/index.js cable && bin/index.js stop
     - name: Test configuration 
-      run: bin/index.js throttle --up 330 --down 780 --rtt 200 && bin/index.js stop
+      run: LOG_THROTTLE=true bin/index.js throttle --up 330 --down 780 --rtt 200 && bin/index.js stop
     - name: Test localhost 
-      run: bin/index.js --rtt 200 --localhost && bin/index.js stop --localhost
+      run: LOG_THROTTLE=true bin/index.js --rtt 200 --localhost && bin/index.js stop --localhost
     - name: Test config file
-      run: bin/index.js --config test/config.json && bin/index.js stop
+      run: LOG_THROTTLE=true bin/index.js --config test/config.json && bin/index.js stop
     - name: Test packet loss
-      run: bin/index.js throttle --up 330 --down 780 --rtt 200 --packetLoss 10 && bin/index.js stop
+      run: LOG_THROTTLE=true bin/index.js throttle --up 330 --down 780 --rtt 200 --packetLoss 10 && bin/index.js stop
     - name: Test packet loss and profile
-      run: bin/index.js 3g --packetLoss 10 && bin/index.js stop
+      run: LOG_THROTTLE=true bin/index.js 3g --packetLoss 10 && bin/index.js stop
