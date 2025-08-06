@@ -150,7 +150,7 @@ async function run(argv) {
       try {
         await start(options);
         if (options.localhost) {
-          console.log(`Started throttler on localhost RTT:${options.rtt}ms `);
+          console.log(`Started throttler on localhost RTT:${options.rtt}ms PL:${options.packetLoss}%`);
         } else {
           let message = 'Started throttler:';
           if (typeof options.down !== 'undefined') {
