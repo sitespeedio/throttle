@@ -1,5 +1,18 @@
 # CHANGELOG - throttle
 
+# 6.0.0 - 2026-03-23
+### Added
+* Added IPv6 throttling support on macOS [#94](https://github.com/sitespeedio/throttle/pull/94) and Linux [#100](https://github.com/sitespeedio/throttle/pull/100).
+* Apply packet loss also to the upload interface [#69](https://github.com/sitespeedio/throttle/pull/69).
+
+### Fixed
+* More robust detection of the default network interface on Linux, falling back to global IP address lookup when the default route is unavailable [#104](https://github.com/sitespeedio/throttle/pull/104).
+* Fixed README profile values for DSL and Edge to match actual code, and fixed Node.js API examples to use named imports.
+
+### Tech
+* Updated ESLint to 10, Prettier to 3, and migrated to flat config [#101](https://github.com/sitespeedio/throttle/pull/101) [#103](https://github.com/sitespeedio/throttle/pull/103).
+* Updated GitHub Actions to use actions/checkout@v4 and actions/setup-node@v4.
+
 # 5.0.1 - 2024-08-26
 ### Fixed
 * Smarter ifb0 handling on Linux [#93](https://github.com/sitespeedio/throttle/pull/93).
