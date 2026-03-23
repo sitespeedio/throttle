@@ -153,16 +153,16 @@ async function run(argv) {
           console.log(`Started throttler on localhost RTT:${options.rtt}ms PL:${options.packetLoss}%`);
         } else {
           let message = 'Started throttler:';
-          if (typeof options.down !== 'undefined') {
+          if (options.down !== undefined) {
             message += ` Down:${options.down}kbit/s`;
           }
-          if (typeof options.up !== 'undefined') {
+          if (options.up !== undefined) {
             message += ` Up:${options.up}kbit/s`;
           }
-          if (typeof options.rtt !== 'undefined') {
+          if (options.rtt !== undefined) {
             message += ` RTT:${options.rtt}ms`;
           }
-          if (typeof options.packetLoss !== 'undefined') {
+          if (options.packetLoss !== undefined) {
             message += ` PacketLoss:${options.packetLoss}%`;
           }
           console.log(message);
