@@ -1,8 +1,8 @@
 # Simulate slow network connections on Linux and Mac OS X
 
-![Linux](https://github.com/sitespeedio/throttle/workflows/Linux/badge.svg)
-![OSX](https://github.com/sitespeedio/throttle/workflows/OSX/badge.svg)
-![Docker](https://github.com/sitespeedio/throttle/workflows/Run%20Docker/badge.svg)
+[![Linux](https://github.com/sitespeedio/throttle/workflows/Linux/badge.svg)](https://github.com/sitespeedio/throttle/actions/workflows/linux.yml)
+[![OSX](https://github.com/sitespeedio/throttle/workflows/OSX/badge.svg)](https://github.com/sitespeedio/throttle/actions/workflows/osx.yml)
+[![Docker](https://github.com/sitespeedio/throttle/workflows/Run%20Docker/badge.svg)](https://github.com/sitespeedio/throttle/actions/workflows/docker.yml)
 
 Inspired by [tylertreat/Comcast](https://github.com/tylertreat/Comcast), the [connectivity setting in the WPTAgent](https://github.com/WPO-Foundation/wptagent/blob/master/internal/traffic_shaping.py) and [sltc](https://github.com/sitespeedio/sltc).
 
