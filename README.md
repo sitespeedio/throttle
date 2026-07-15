@@ -104,7 +104,7 @@ or
 throttle stop
 ```
 
-## Add delay on your localhost 
+## Add delay on your localhost
 This is useful if you test a local web server or run [WebPageReplay](https://github.com/catapult-project/catapult/blob/master/web_page_replay_go/README.md) and want to add some latency to your tests.
 
 ```
@@ -142,7 +142,7 @@ You can log all the commands that sets up the throttling by setting `LOG_THROTTL
 LOG_THROTTLE=true throttle 3gslow
 ```
 
-or 
+or
 
 ```
 throttle 3gslow --log
@@ -152,4 +152,4 @@ throttle 3gslow --log
 
 Make sure to run ```sudo modprobe ifb numifbs=1``` before you start the container.
 
-And then when you actually start your Docker container, give it the right privileges with ```--cap-add=NET_ADMIN```.
+And then when you start your Docker container, give it the right privileges with ```--cap-add=NET_ADMIN```.
