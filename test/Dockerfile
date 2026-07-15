@@ -1,4 +1,4 @@
-FROM sitespeedio/node:ubuntu-20.04-nodejs-16.5.0
+FROM sitespeedio/node:ubuntu-24-04-nodejs-24.18.0
 
 RUN apt-get update && apt-get install libnss3-tools iproute2 sudo net-tools -y
 RUN mkdir -p /usr/src/app
