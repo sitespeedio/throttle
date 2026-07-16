@@ -1,8 +1,8 @@
 # CHANGELOG - throttle
 
-# UNRELEASED
+# 6.0.1 - 2026-07-16
 ### Fixed
-* Linux throttling no longer fails with "Exclusivity flag on, cannot modify" when another tool already holds the ingress qdisc slot on the interface. GitHub-hosted Actions runners now come with an eBPF network-monitoring agent that attaches a clsact qdisc to the default interface (other eBPF-based security agents do the same), and since only one ingress/clsact qdisc can exist per device, throttle's `tc qdisc add ... ingress` failed and took the whole measurement run down with it. The original code path is unchanged and runs first; only when it fails does throttle fall back to attaching its redirect filters to the existing qdisc (on the clsact ingress hook when needed), with explicit filter priorities so stop removes exactly its own filters and leaves the other tool's qdisc and filters untouched.
+* Make throttle work on GitHub Actions again: Linux throttling no longer fails with "Exclusivity flag on, cannot modify" when another tool already holds the ingress qdisc slot on the interface. GitHub-hosted Actions runners now come with an eBPF network-monitoring agent that attaches a clsact qdisc to the default interface (other eBPF-based security agents do the same), and since only one ingress/clsact qdisc can exist per device, throttle's `tc qdisc add ... ingress` failed and took the whole measurement run down with it. The original code path is unchanged and runs first; only when it fails does throttle fall back to attaching its redirect filters to the existing qdisc (on the clsact ingress hook when needed), with explicit filter priorities so stop removes exactly its own filters and leaves the other tool's qdisc and filters untouched. [#108](https://github.com/sitespeedio/throttle/pull/108).
 
 # 6.0.0 - 2026-03-23
 ### Added
@@ -123,7 +123,7 @@
 
 ## 0.5.2 2019-08-26
 ### Fixed
-* Updated dependencies [#31](https://github.com/sitespeedio/throttle/pull/31). 
+* Updated dependencies [#31](https://github.com/sitespeedio/throttle/pull/31).
 
 ## 0.5.1 2019-04-23
 ### Fixed
