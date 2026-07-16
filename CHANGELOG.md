@@ -1,5 +1,9 @@
 # CHANGELOG - throttle
 
+# UNRELEASED
+### Fixed
+* Linux throttling no longer fails with "Exclusivity flag on, cannot modify" when another tool already holds the ingress qdisc slot on the interface. GitHub-hosted Actions runners now come with an eBPF network-monitoring agent that attaches a clsact qdisc to the default interface (other eBPF-based security agents do the same), and since only one ingress/clsact qdisc can exist per device, throttle's `tc qdisc add ... ingress` failed and took the whole measurement run down with it. The original code path is unchanged and runs first; only when it fails does throttle fall back to attaching its redirect filters to the existing qdisc (on the clsact ingress hook when needed), with explicit filter priorities so stop removes exactly its own filters and leaves the other tool's qdisc and filters untouched.
+
 # 6.0.0 - 2026-03-23
 ### Added
 * Added IPv6 throttling support on macOS [#94](https://github.com/sitespeedio/throttle/pull/94) and Linux [#100](https://github.com/sitespeedio/throttle/pull/100).
