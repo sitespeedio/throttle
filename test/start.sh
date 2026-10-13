@@ -27,3 +27,9 @@ tc qdisc del dev "$INTERFACE" clsact
 tc qdisc add dev "$INTERFACE" ingress
 bin/index.js --profile cable
 bin/index.js --stop
+
+## Localhost sets a real network MTU and stop restores the loopback default
+bin/index.js --rtt 200 --localhost
+ip link show lo | grep -q 'mtu 1500'
+bin/index.js --stop --localhost
+ip link show lo | grep -q 'mtu 65536'
