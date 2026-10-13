@@ -124,7 +124,9 @@ async function run(argv) {
       if (argv.profile in profiles || argv._[0] in profiles) {
         options = profiles[argv.profile || argv._[0]];
 
-        if (argv.packetLoss) {
+        if (argv.localhost) {
+          options = { localhost: true, down: options.down, rtt: options.rtt };
+        } else if (argv.packetLoss) {
           options.packetLoss = argv.packetLoss;
         }
 
@@ -150,7 +152,11 @@ async function run(argv) {
       try {
         await start(options);
         if (options.localhost) {
-          console.log(`Started throttler on localhost RTT:${options.rtt}ms `);
+          const down =
+            options.down === undefined ? '' : ` Down:${options.down}kbit/s`;
+          console.log(
+            `Started throttler on localhost RTT:${options.rtt}ms${down}`
+          );
         } else {
           let message = 'Started throttler:';
           if (options.down !== undefined) {
