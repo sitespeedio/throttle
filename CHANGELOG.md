@@ -1,5 +1,12 @@
 # CHANGELOG - throttle
 
+# 6.2.0 - 2026-10-13
+### Added
+* On Linux, you can set a download limit on localhost: `throttle --rtt 200 --down 5000 --localhost`. The limit is for all traffic on loopback. Upload limits are not supported on localhost [#116](https://github.com/sitespeedio/throttle/pull/116).
+
+### Fixed
+* `--profile` together with `--localhost` throttled the network interface, not localhost. Now it uses the download and RTT of the profile on localhost [#116](https://github.com/sitespeedio/throttle/pull/116).
+
 # 6.1.0 - 2026-10-13
 ### Fixed
 * On Linux, `--localhost` now sets the loopback MTU to 1500, like a real network. With the default MTU (65536), WebPageReplay runs were a full round trip apart from run to run. `--stop --localhost` sets the MTU back to 65536. Localhost metrics can change after you upgrade [#115](https://github.com/sitespeedio/throttle/pull/115).
