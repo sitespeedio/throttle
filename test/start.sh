@@ -33,3 +33,15 @@ bin/index.js --rtt 200 --localhost
 ip link show lo | grep -q 'mtu 1500'
 bin/index.js --stop --localhost
 ip link show lo | grep -q 'mtu 65536'
+
+## Localhost with a download limit, from flags and from a profile
+bin/index.js --rtt 200 --down 5000 --localhost
+tc qdisc show dev lo | grep -q 'delay 100ms.*rate 5Mbit'
+bin/index.js --stop --localhost
+bin/index.js --profile cable --localhost
+tc qdisc show dev lo | grep -q 'delay 7ms.*rate 5Mbit'
+bin/index.js --stop --localhost
+if tc qdisc show dev "$INTERFACE" | grep -q netem; then
+  echo "a profile with --localhost throttled $INTERFACE" >&2
+  exit 1
+fi
