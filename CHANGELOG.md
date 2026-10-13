@@ -1,5 +1,9 @@
 # CHANGELOG - throttle
 
+# 6.1.0 - 2026-10-13
+### Fixed
+* On Linux, `--localhost` now sets the loopback MTU to 1500, like a real network. With the default MTU (65536), WebPageReplay runs were a full round trip apart from run to run. `--stop --localhost` sets the MTU back to 65536. Localhost metrics can change after you upgrade [#115](https://github.com/sitespeedio/throttle/pull/115).
+
 # 6.0.1 - 2026-07-16
 ### Fixed
 * Make throttle work on GitHub Actions again: Linux throttling no longer fails with "Exclusivity flag on, cannot modify" when another tool already holds the ingress qdisc slot on the interface. GitHub-hosted Actions runners now come with an eBPF network-monitoring agent that attaches a clsact qdisc to the default interface (other eBPF-based security agents do the same), and since only one ingress/clsact qdisc can exist per device, throttle's `tc qdisc add ... ingress` failed and took the whole measurement run down with it. The original code path is unchanged and runs first; only when it fails does throttle fall back to attaching its redirect filters to the existing qdisc (on the clsact ingress hook when needed), with explicit filter priorities so stop removes exactly its own filters and leaves the other tool's qdisc and filters untouched. [#108](https://github.com/sitespeedio/throttle/pull/108).
