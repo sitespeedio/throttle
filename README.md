@@ -111,6 +111,8 @@ This is useful if you test a local web server or run [WebPageReplay](https://git
 throttle --rtt 200 --localhost
 ```
 
+On Linux, throttle also sets the MTU of the loopback interface to 1500, the packet size of real networks. With the loopback default (65536), the receive window of the browser limits the transfer, and the number of round trips changes from run to run. Stop sets the MTU back to 65536. If you do this on a host and not in a container, all local traffic uses the smaller packets until you stop.
+
 ## Stop adding delay on localhost
 
 ```
